@@ -11,12 +11,16 @@ body {
   line-height: 1.5;
 }
 
+hr{
+    background-color: #e5e9f0; 
+    height: 1px; 
+    border: 0; 
+}
+
 .container {
   display: flex;
   background: #fff;
   width: 100%;
-  height: 60vh;
-  min-height: 300px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow-x: auto;
@@ -27,18 +31,15 @@ body {
 .column-wrapper {
   position: relative;
   flex: 0 0 auto;
-  width: 300px;
-  min-width: 120px;
   display: flex;
 }
 
 .column {
   flex: 1;
-  padding: 1.5rem 1rem;
   overflow-x: auto;
   overflow-y: auto;
   background: #fff;
-  border-right: 1px solid #e0e0e0;
+  border-right: 2px solid #e0e0e0;
   font-size: 0.875rem;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
@@ -48,6 +49,7 @@ body {
   margin: 0 0 1rem 0;
   font-size: 1rem;
   font-weight: 500;
+  padding: 1.5rem 1rem;
   color: #424242;
   white-space: nowrap;
   overflow: hidden;
@@ -104,18 +106,10 @@ body {
   }
 
   .container {
-    height: 50vh;
-    min-height: 250px;
     border-radius: 4px;
   }
 
-  .column-wrapper {
-    width: 250px;
-    min-width: 150px;
-  }
-
   .column {
-    padding: 1rem 0.75rem;
     font-size: 0.8125rem;
   }
 
@@ -169,3 +163,14 @@ body {
     transition: none;
   }
 }
+
+
+
+/* USER CSS START */
+.column-wrapper .column span{
+    display: block;
+    padding: 0 1rem;;
+    margin: 15px 0;
+    box-sizing: border-box;
+}
+/* USER CSS END */

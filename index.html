@@ -11,6 +11,15 @@
 </head>
 <body>
 
+    <div class="formatter-container">
+        <button class="formatter-button" onclick="formatter.formatAllNumbers()">
+            Format to
+            <input type="number" class="decimal-input" id="decimalPlaces" value="2" min="0" max="10" onclick="event.stopPropagation()">
+            decimal places
+        </button>
+    </div>
+    
+
     <h2>For Low Flow Rate</h2>
     <div class="container">
 
@@ -21,12 +30,21 @@
                     (function(){
                     const frag = new DocumentFragment();
                     for (let i = 1; i <= 10; i++) {
-                        frag.appendChild(Object.assign(document.createElement('p'), { textContent: i }));
+                        frag.appendChild(Object.assign(document.createElement('span'), { textContent: i }));
+                        frag.appendChild(document.createElement('hr'));
                     }
                     document.currentScript.parentNode.insertBefore(frag, document.currentScript);
                     document.currentScript.remove();
                     })();
                 </script>
+            </div>
+            <div class="resize-handle"></div>
+        </div>
+
+        <div class="column-wrapper">
+            <div class="column">
+                <h3>Vol. (m)</h3>
+                <input data-formattable value="123.456789">
             </div>
             <div class="resize-handle"></div>
         </div>

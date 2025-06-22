@@ -2,8 +2,8 @@ export default class DivResize {
   constructor(container, options = {}) {
     // Default options
     this.options = {
-      minWidth: 120,
-      mobileMinWidth: 150,
+      minWidth: 40,
+      mobileMinWidth: 40,
       handleSelector: '.resize-handle',
       wrapperSelector: '.column-wrapper',
       mobileBreakpoint: 768,
